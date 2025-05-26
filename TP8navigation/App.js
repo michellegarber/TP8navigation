@@ -3,12 +3,15 @@ import { Button, TextInput, Text, View, StyleSheet, TouchableOpacity } from 'rea
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import homeScreen from "./source/homeScreen";
-import homeScreen2 from "./source/homeScreen2";
-import settingScreen from "./source/settingScreen";
-import settingScreen2 from "./source/settingScreen2";
-import details from "./source/details";
-import details2 from "./source/details2";
+import HomeScreen from "./source/HomeScreen";
+import HomeScreen2 from "./source/HomeScreen2";
+import SettingScreen from "./source/SettingScreen";
+import SettingScreen2 from "./source/SettingScreen2";
+import Details  from "./source/Details";
+import Details2 from "./source/Details2";
+import Perfil from "./source/Perfil";
+import Perfil2 from "./source/Perfil2";
+
 
 const StackA = createNativeStackNavigator();
 const StackB = createNativeStackNavigator();
@@ -17,8 +20,8 @@ const StackC = createNativeStackNavigator();
 function StackANavigator() {
   return (
     <StackA.Navigator>
-      <StackA.Screen name="homeScreen" component={homeScreen} />
-      <StackA.Screen name="homeScreen2" component={homeScreen2} />
+      <StackA.Screen name="homeScreen" component={HomeScreen} />
+      <StackA.Screen name="homeScreen2" component={HomeScreen2} />
     </StackA.Navigator>
   );
 }
@@ -26,8 +29,8 @@ function StackANavigator() {
 function StackBNavigator() {
   return (
     <StackB.Navigator>
-      <StackB.Screen name="ScreenB1" component={settingScreen} />
-      <StackB.Screen name="ScreenB2" component={settingScreen2} />
+      <StackB.Screen name="ScreenB1" component={SettingScreen} />
+      <StackB.Screen name="ScreenB2" component={SettingScreen2} />
     </StackB.Navigator>
   );
 }
@@ -35,8 +38,8 @@ function StackBNavigator() {
 function StackCNavigator() {
   return (
     <StackC.Navigator>
-      <StackC.Screen name="ScreenC1" component={details} />
-      <StackC.Screen name="ScreenC2" component={details2} />
+      <StackC.Screen name="ScreenC1" component={Details} />
+      <StackC.Screen name="ScreenC2" component={Details2} />
     </StackC.Navigator>
   );
 }
@@ -44,8 +47,8 @@ function StackCNavigator() {
 function StackDNavigator() {
   return (
     <StackD.Navigator>
-      <StackD.Screen name="ScreenD1" component={details} />
-      <StackD.Screen name="ScreenD2" component={details2} />
+      <StackD.Screen name="ScreenD1" component={Perfil} />
+      <StackD.Screen name="ScreenD2" component={Perfil2} />
     </StackD.Navigator>
   );
 }

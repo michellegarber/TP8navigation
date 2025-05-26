@@ -1,7 +1,10 @@
-export default function homeScreen() {
-    return (
-      <NavigationContainer>
-        <MyTabs />
-      </NavigationContainer>
-    );
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+
+export default function Perfil() {
+  return (
+    <View>
+      <Text>Home</Text>
+    </View>
+  ); 
   }
