@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { Button, TextInput, Text, View, StyleSheet, TouchableOpacity } from 'react-native';
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Ionicons from 'react-native-vector-icons/Ionicons'; 
 import HomeScreen from "./source/HomeScreen";
 import HomeScreen2 from "./source/HomeScreen2";
 import SettingScreen from "./source/SettingScreen";
@@ -16,6 +17,8 @@ import Perfil2 from "./source/Perfil2";
 const StackA = createNativeStackNavigator();
 const StackB = createNativeStackNavigator();
 const StackC = createNativeStackNavigator();
+const StackD = createNativeStackNavigator();
+
 
 function StackANavigator() {
   return (
@@ -29,8 +32,8 @@ function StackANavigator() {
 function StackBNavigator() {
   return (
     <StackB.Navigator>
-      <StackB.Screen name="ScreenB1" component={SettingScreen} />
-      <StackB.Screen name="ScreenB2" component={SettingScreen2} />
+      <StackB.Screen name="Ajustes" component={SettingScreen} />
+      <StackB.Screen name="Ajustes2" component={SettingScreen2} />
     </StackB.Navigator>
   );
 }
@@ -38,8 +41,8 @@ function StackBNavigator() {
 function StackCNavigator() {
   return (
     <StackC.Navigator>
-      <StackC.Screen name="ScreenC1" component={Details} />
-      <StackC.Screen name="ScreenC2" component={Details2} />
+      <StackC.Screen name="Detalles" component={Details} />
+      <StackC.Screen name="Detalles2" component={Details2} />
     </StackC.Navigator>
   );
 }
@@ -47,8 +50,8 @@ function StackCNavigator() {
 function StackDNavigator() {
   return (
     <StackD.Navigator>
-      <StackD.Screen name="ScreenD1" component={Perfil} />
-      <StackD.Screen name="ScreenD2" component={Perfil2} />
+      <StackD.Screen name="Perfil" component={Perfil} />
+      <StackD.Screen name="Perfil2" component={Perfil2} />
     </StackD.Navigator>
   );
 }
@@ -92,6 +95,7 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
